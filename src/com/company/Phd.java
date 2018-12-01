@@ -29,7 +29,6 @@ public class Phd {
             }
         }
         labS.Phds[login]= new Phd(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);  
-
+        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
     }
 }
