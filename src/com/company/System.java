@@ -8,7 +8,7 @@ public class System {
     Teacher[] Teachers;
     Phd[] Phds;
     Mastering[] Masterings;
-    Undergraduate[] undergraduates;
+    Undergraduate[] Undergraduates;
     public void newAdmin(){
         java.lang.System.out.print("Choose your formation:\n");
         java.lang.System.out.print("Researcher - 1\n");

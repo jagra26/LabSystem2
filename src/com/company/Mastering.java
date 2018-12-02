@@ -28,7 +28,7 @@ public class Mastering {
                 break;
             }
         }
-        labS.Phds[login]= new Mastering(newName, newEmail, login, isAdmin);
+        labS.Masterings[login]= new Mastering(newName, newEmail, login, isAdmin);
         java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
     }
 }
