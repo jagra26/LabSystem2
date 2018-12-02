@@ -176,11 +176,13 @@ public class System {
         java.lang.System.out.print("insert your login:\n");
         int login = input.nextInt();
         boolean logIn = false;
+        boolean isAdm = false;
         switch (cases) {
             case 1:
                 if (labS.Researchers[login] != null){
                     java.lang.System.out.printf("welcome %s!\n", labS.Researchers[login].name);
                     logIn = true;
+                    isAdm = labS.Researchers[login].admin;
                 }else{
                     java.lang.System.out.print("non-existent user\n");
                 }
@@ -189,6 +191,7 @@ public class System {
                 if (labS.Teachers[login] != null){
                     java.lang.System.out.printf("welcome %s!\n", labS.Teachers[login].name);
                     logIn = true;
+                    isAdm = labS.Teachers[login].admin;
                 }else{
                     java.lang.System.out.print("non-existent user\n");
                 }
@@ -197,6 +200,7 @@ public class System {
                 if (labS.Phds[login] != null){
                     java.lang.System.out.printf("welcome %s!\n", labS.Phds[login].name);
                     logIn = true;
+                    isAdm = labS.Phds[login].admin;
                 }else{
                     java.lang.System.out.print("non-existent user\n");
                 }
@@ -205,6 +209,7 @@ public class System {
                 if (labS.Masterings[login] != null){
                     java.lang.System.out.printf("welcome %s!\n", labS.Masterings[login].name);
                     logIn = true;
+                    isAdm = labS.Masterings[login].admin;
                 }else {
                     java.lang.System.out.print("non-existent user\n");
                 }
@@ -213,16 +218,63 @@ public class System {
                 if (labS.Undergraduates[login] != null){
                     java.lang.System.out.printf("welcome %s!\n", labS.Undergraduates[login].name);
                     logIn = true;
+                    isAdm = labS.Undergraduates[login].admin;
                 }else{
                     java.lang.System.out.print("non-existent user\n");
                 }
                 break;
         }
         while (logIn){
-            logIn = userDisp(labS, cases, login);
+            logIn = !userDisp(labS, cases, login, isAdm);
         }
     }
 
+    public boolean userDisp(System labS, int cases, int login, boolean isAdm){
+        boolean logOff = false;
+        if (isAdm){
+            logOff = adminDisp(labS, cases, login);
+        }else{
+            logOff = commonDisp(labS, cases, login);
+        }
+        return logOff;
+    }
+
+    public boolean commonDisp(System labS, int cases, int login){
+        boolean logOff = false;
+        switch (cases){
+            case 1:
+                logOff = commonRDisp(labS, login);
+                break;
+            case 2:
+                logOff = commonTDisp(labS, login);
+                break;
+            case 3:
+                logOff = commonPDisp(labS, login);
+                break;
+            case 4:
+                logOff = commonMDisp(labS, login);
+                break;
+            case 5:
+                logOff = commonUDisp(labS, login);
+                break;
+        }
+        return logOff;
+    }
+    public boolean commonRDisp(System labS, int login){
+
+    }
+    public boolean commonTDisp(System labS, int login){
+
+    }
+    public boolean commonPDisp(System labS, int login){
+
+    }
+    public boolean commonMDisp(System labS, int login){
+
+    }
+    public boolean commonUDisp(System labS, int login){
+
+    }
     public boolean display(System labS) {
         boolean exit = false;
         java.lang.System.out.print("insert your option\n");
@@ -249,6 +301,6 @@ public class System {
         return exit;
     }
 
-    
+
 }
 
