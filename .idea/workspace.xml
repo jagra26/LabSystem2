@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bdcc2f0a-7117-47a0-959e-95e40fa0f36b" name="Default Changelist" comment="" />
+    <list default="true" id="bdcc2f0a-7117-47a0-959e-95e40fa0f36b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/company/Mastering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Mastering.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Phd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Phd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Researcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Researcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/System.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/System.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Teacher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Undergraduate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Undergraduate.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+            <state relative-caret-position="336">
+              <caret line="251" column="4" selection-start-line="251" selection-start-column="4" selection-end-line="251" selection-end-column="4" />
+              <folding>
+                <element signature="method#System#0;class#System#0" />
+                <element signature="method#newResearcher#0;class#System#0" />
+                <element signature="method#newTeacher#0;class#System#0" />
+                <element signature="method#newPhd#0;class#System#0" />
+                <element signature="method#newMastering#0;class#System#0" />
+                <element signature="method#newUndergraduate#0;class#System#0" />
+                <element signature="method#newAdmin#0;class#System#0" />
+                <element signature="method#newUser#0;class#System#0" />
+                <element signature="e#6455#7802#0" />
+                <element signature="method#display#0;class#System#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +69,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Researcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="33" column="5" selection-start-line="5" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+            <state relative-caret-position="306">
+              <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -59,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Teacher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="166">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -68,17 +87,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Phd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+            <state relative-caret-position="183">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Mastering.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="183">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -86,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Undergraduate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="166">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -108,10 +127,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Admin.java" />
-        <option value="$PROJECT_DIR$/src/com/company/System.java" />
         <option value="$PROJECT_DIR$/src/com/company/Researcher.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Teacher.java" />
         <option value="$PROJECT_DIR$/src/com/company/Phd.java" />
         <option value="$PROJECT_DIR$/src/com/company/Mastering.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Undergraduate.java" />
+        <option value="$PROJECT_DIR$/src/com/company/System.java" />
       </list>
     </option>
   </component>
@@ -154,7 +175,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543761649274" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543765304306" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -208,7 +229,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -217,7 +238,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -231,25 +252,23 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/System.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Lab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -260,6 +279,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Phd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Mastering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Undergraduate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Lab.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Project.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -267,38 +321,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Researcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="33" column="5" selection-start-line="5" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
+        <state relative-caret-position="306">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Undergraduate.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Phd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Mastering.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="336">
+          <caret line="251" column="4" selection-start-line="251" selection-start-column="4" selection-end-line="251" selection-end-column="4" />
+          <folding>
+            <element signature="method#System#0;class#System#0" />
+            <element signature="method#newResearcher#0;class#System#0" />
+            <element signature="method#newTeacher#0;class#System#0" />
+            <element signature="method#newPhd#0;class#System#0" />
+            <element signature="method#newMastering#0;class#System#0" />
+            <element signature="method#newUndergraduate#0;class#System#0" />
+            <element signature="method#newAdmin#0;class#System#0" />
+            <element signature="method#newUser#0;class#System#0" />
+            <element signature="e#6455#7802#0" />
+            <element signature="method#display#0;class#System#0" />
+          </folding>
         </state>
       </provider>
     </entry>
