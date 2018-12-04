@@ -13,7 +13,7 @@ public class Teacher {
         this.email = email;
         this.login = login;
         this.admin = admin;
-        this.projects = new Project[1000];
+        this.projects = new Project[100];
     }
 
 }
