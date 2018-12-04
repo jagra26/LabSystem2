@@ -275,6 +275,44 @@ public class System {
     public boolean commonUDisp(System labS, int login){
 
     }
+
+    public  boolean adminDisp(System labS, int cases, int login){
+        boolean logOff = false;
+        switch (cases){
+            case 1:
+                logOff = adminRDisp(labS, login);
+                break;
+            case 2:
+                logOff = adminTDisp(labS, login);
+                break;
+            case 3:
+                logOff = adminPDisp(labS, login);
+                break;
+            case 4:
+                logOff = adminMDisp(labS, login);
+                break;
+            case 5:
+                logOff = adminUDisp(labS, login);
+                break;
+        }
+        return logOff;
+    }
+
+    public boolean adminRDisp(System labS, int login){
+
+    }
+    public boolean adminTDisp(System labS, int login){
+
+    }
+    public boolean adminPDisp(System labS, int login){
+
+    }
+    public boolean adminMDisp(System labS, int login){
+
+    }
+    public boolean adminUDisp(System labS, int login){
+
+    }
     public boolean display(System labS) {
         boolean exit = false;
         java.lang.System.out.print("insert your option\n");
@@ -300,6 +338,19 @@ public class System {
         }
         return exit;
     }
+    public void newLab(System labS, int login, int cases){
+        java.lang.System.out.print("enter the name of the laboratory:\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        String name = input.nextLine();
+        for (int i = 0; i<1000; i++){
+            if (labS.Labs[i] == null){
+                labS.Labs[i] = new Lab(name, cases, login, i);
+                java.lang.System.out.printf("number of lab is %d\n", i);
+                break;
+            }
+        }
+    }
+    public void newProject(System labS, Lab laboratory, int login, int cases)
 
 
 }
