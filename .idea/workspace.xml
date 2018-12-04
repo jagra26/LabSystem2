@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bdcc2f0a-7117-47a0-959e-95e40fa0f36b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Publication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Mastering.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Mastering.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Phd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Phd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Lab.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Lab.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Project.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Researcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Researcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Teacher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Undergraduate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Undergraduate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/System.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/System.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="887">
-              <caret line="352" column="76" selection-start-line="352" selection-start-column="76" selection-end-line="352" selection-end-column="76" />
+            <state relative-caret-position="290">
+              <caret line="314" column="7" selection-start-line="314" selection-start-column="7" selection-end-line="314" selection-end-column="7" />
               <folding>
                 <element signature="method#System#0;class#System#0" />
                 <element signature="method#newResearcher#0;class#System#0" />
@@ -45,11 +40,9 @@
                 <element signature="method#newUser#0;class#System#0" />
                 <element signature="method#logon#0;class#System#0" />
                 <element signature="method#commonDisp#0;class#System#0" />
-                <element signature="method#commonRDisp#0;class#System#0" />
                 <element signature="method#commonTDisp#0;class#System#0" />
                 <element signature="method#adminDisp#0;class#System#0" />
                 <element signature="method#display#0;class#System#0" />
-                <element signature="method#newLab#0;class#System#0" />
               </folding>
             </state>
           </provider>
@@ -58,21 +51,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Lab.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+            <state relative-caret-position="138">
+              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
               <folding>
                 <element signature="e#613#614#0" expanded="true" />
                 <element signature="e#672#673#0" expanded="true" />
+                <element signature="method#newLab#0;class#Lab#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Project.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="120">
+              <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <element signature="e#5266#5267#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Publication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
+            <state relative-caret-position="544">
               <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
             </state>
           </provider>
@@ -107,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Phd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+            <state relative-caret-position="238">
+              <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -148,8 +145,6 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/company/Admin.java" />
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/company/System.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Lab.java" />
         <option value="$PROJECT_DIR$/src/com/company/Publication.java" />
         <option value="$PROJECT_DIR$/src/com/company/Researcher.java" />
         <option value="$PROJECT_DIR$/src/com/company/Teacher.java" />
@@ -157,6 +152,8 @@
         <option value="$PROJECT_DIR$/src/com/company/Mastering.java" />
         <option value="$PROJECT_DIR$/src/com/company/Undergraduate.java" />
         <option value="$PROJECT_DIR$/src/com/company/Project.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Lab.java" />
+        <option value="$PROJECT_DIR$/src/com/company/System.java" />
       </list>
     </option>
   </component>
@@ -247,7 +244,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25340393" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -265,7 +262,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -296,52 +293,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Mastering.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Undergraduate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Lab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding>
-            <element signature="e#613#614#0" expanded="true" />
-            <element signature="e#672#673#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="887">
-          <caret line="352" column="76" selection-start-line="352" selection-start-column="76" selection-end-line="352" selection-end-column="76" />
-          <folding>
-            <element signature="method#System#0;class#System#0" />
-            <element signature="method#newResearcher#0;class#System#0" />
-            <element signature="method#newTeacher#0;class#System#0" />
-            <element signature="method#newPhd#0;class#System#0" />
-            <element signature="method#newMastering#0;class#System#0" />
-            <element signature="method#newUndergraduate#0;class#System#0" />
-            <element signature="method#newAdmin#0;class#System#0" />
-            <element signature="method#newUser#0;class#System#0" />
-            <element signature="method#logon#0;class#System#0" />
-            <element signature="method#commonDisp#0;class#System#0" />
-            <element signature="method#commonRDisp#0;class#System#0" />
-            <element signature="method#commonTDisp#0;class#System#0" />
-            <element signature="method#adminDisp#0;class#System#0" />
-            <element signature="method#display#0;class#System#0" />
-            <element signature="method#newLab#0;class#System#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Publication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -361,29 +330,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Phd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="238">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Mastering.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Publication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="544">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Undergraduate.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Lab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+        <state relative-caret-position="138">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="method#newLab#0;class#Lab#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Project.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="97" column="47" selection-start-line="97" selection-start-column="47" selection-end-line="97" selection-end-column="47" />
+        <state relative-caret-position="120">
+          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <element signature="e#5266#5267#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="314" column="7" selection-start-line="314" selection-start-column="7" selection-end-line="314" selection-end-column="7" />
+          <folding>
+            <element signature="method#System#0;class#System#0" />
+            <element signature="method#newResearcher#0;class#System#0" />
+            <element signature="method#newTeacher#0;class#System#0" />
+            <element signature="method#newPhd#0;class#System#0" />
+            <element signature="method#newMastering#0;class#System#0" />
+            <element signature="method#newUndergraduate#0;class#System#0" />
+            <element signature="method#newAdmin#0;class#System#0" />
+            <element signature="method#newUser#0;class#System#0" />
+            <element signature="method#logon#0;class#System#0" />
+            <element signature="method#commonDisp#0;class#System#0" />
+            <element signature="method#commonTDisp#0;class#System#0" />
+            <element signature="method#adminDisp#0;class#System#0" />
+            <element signature="method#display#0;class#System#0" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,11 +1,13 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Project {
     String title, fundingAgency, objective, description, status;
     int[][] participants;
     int begin, end, value;
     Publication[] publications;
-    public Project(String title, String fundingAgency, String objective, String description, int begin, int end, int value,
+    public Project(System labS, String title, String fundingAgency, String objective, String description, int begin, int end, int value,
                    int cases, int login){
         this.title = title;
         this.fundingAgency = fundingAgency;
@@ -23,6 +25,14 @@ public class Project {
         this.publications = new Publication[100];
         this.participants[cases-1][login] = 1;
         this.status = "in preparation";
+        int tLog;
+        Scanner input = new Scanner(java.lang.System.in);
+        if(cases != 2){
+            java.lang.System.out.print("insert a teacher login\n");
+            tLog = input.nextInt();
+            this.addParticipant(labS, this, 2, tLog);
+        }
+
     }
     public void addParticipant(System labS, Project project, int cases, int login){
         boolean free = true;
@@ -86,6 +96,25 @@ public class Project {
                 break;
             case 4:
                 for (int i = 0; i<100; i++){
+                    if(labS.Masterings[login].projects[i] != null){
+                        free = false;
+                        break;
+                    }
+                }
+                if (free){
+                    project.participants[cases-1][login] = 1;
+                    for (int i = 0; i<100; i++){
+                        if (labS.Masterings[login].projects[i] == null){
+                            labS.Masterings[login].projects[i] = project;
+                            break;
+                        }
+                    }
+                }else{
+                    java.lang.System.out.print("user not available\n");
+                }
+                break;
+            case 5:
+                for (int i = 0; i<100; i++){
                     if(labS.Undergraduates[login].projects[i] != null && !labS.Undergraduates[login].projects[i].status.equals("in progress")){
                         free = false;
                         break;
@@ -96,25 +125,6 @@ public class Project {
                     for (int i = 0; i<100; i++){
                         if (labS.Undergraduates[login].projects[i] == null){
                             labS.Undergraduates[login].projects[i] = project;
-                            break;
-                        }
-                    }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
-            case 1:
-                for (int i = 0; i<100; i++){
-                    if(labS.Researchers[login].projects[i] != null && !labS.Researchers[login].projects[i].status.equals("in progress")){
-                        free = false;
-                        break;
-                    }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Researchers[login].projects[i] == null){
-                            labS.Researchers[login].projects[i] = project;
                             break;
                         }
                     }
