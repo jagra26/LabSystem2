@@ -7,6 +7,7 @@ public class Project {
     int[][] participants;
     int begin, end, value;
     Publication[] publications;
+    Guidance[] guidelines;
     public Project(System labS, String title, String fundingAgency, String objective, String description, int begin, int end, int value,
                    int cases, int login){
         this.title = title;
@@ -23,6 +24,7 @@ public class Project {
             }
         }
         this.publications = new Publication[100];
+        this.guidelines = new Guidance[100];
         this.participants[cases-1][login] = 1;
         this.status = "in preparation";
         int tLog;
