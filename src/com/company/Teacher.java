@@ -7,6 +7,8 @@ public class Teacher {
     String email;
     int login;
     Project[] projects;
+    Guidance[] guidelines;
+    Publication[] publications;
     boolean admin;
     public Teacher(String name, String email, int login, boolean admin){
         this.name = name;
@@ -14,7 +16,34 @@ public class Teacher {
         this.login = login;
         this.admin = admin;
         this.projects = new Project[100];
+        this.guidelines = new Guidance[100];
+        this.publications = new Publication[100];
     }
+    public void tInfo (){
+        java.lang.System.out.print("name: "+this.name+"\n");
+        java.lang.System.out.print("email: "+this.email+"\n");
+        java.lang.System.out.print("your projects:\n");
+        for (int i = 0; i<100; i++){
+            if(this.projects[i] != null){
+                java.lang.System.out.print("title: "+ this.projects[i].title+"\n");
+                java.lang.System.out.print("Status"+this.projects[i].status+"\n");
+                java.lang.System.out.printf("End (ddmmyyyy): %d\n",this.projects[i].end);
+                java.lang.System.out.print("-------\n");
+            }
+        }
+        java.lang.System.out.print("your publications:\n");
+        int guidelines = 0;
+        for (int i = 0; i<100; i++){
 
+            if(this.publications[i] != null){
+                java.lang.System.out.print("title: "+ this.publications[i].title+"\n");
+                java.lang.System.out.printf("Year: %d\n",this.publications[i].year);
+                java.lang.System.out.print("-------\n");
+            }
+            if (this.guidelines[i] != null){guidelines++;}
+
+        }
+        java.lang.System.out.printf("number of guidelines: %d\n", guidelines);
+    }
 }
 

@@ -241,7 +241,7 @@ public class System {
 
     public boolean commonDisp(System labS, int cases, int login){
         boolean logOff = false;
-        /*switch (cases){
+        switch (cases){
             case 1:
                 logOff = commonRDisp(labS, login);
                 break;
@@ -257,24 +257,137 @@ public class System {
             case 5:
                 logOff = commonUDisp(labS, login);
                 break;
-        }*/
+        }
         return logOff;
     }
-    /*public boolean commonRDisp(System labS, int login){
+    public boolean commonRDisp(System labS, int login){
+        boolean logOff = false;
+        java.lang.System.out.print("select a option:\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        int cases = input.nextInt();
+        int number;
+        switch (cases){
+            case 1:
+                labS.Researchers[login].rInfo();
+                break;
+            case 2:
+                break;
+            case 3:
+                java.lang.System.out.print("insert a lab number\n");
+                number = input.nextInt();
+                labS.Labs[number].report(labS.Labs[number]);
+                break;
+            case 4:
+                logOff = true;
+                break;
+        }
 
+        return logOff;
     }
-    public boolean commonTDisp(System labS, int login){
 
+    public boolean commonTDisp(System labS, int login){
+        boolean logOff = false;
+        java.lang.System.out.print("select a option:\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        int cases = input.nextInt();
+        int number;
+        switch (cases){
+            case 1:
+                labS.Teachers[login].tInfo();
+                break;
+            case 2:
+                break;
+            case 3:
+                java.lang.System.out.print("insert a lab number\n");
+                number = input.nextInt();
+                labS.Labs[number].report(labS.Labs[number]);
+                break;
+            case 4:
+                logOff = true;
+                break;
+        }
+
+        return logOff;
     }
     public boolean commonPDisp(System labS, int login){
+        boolean logOff = false;
+        java.lang.System.out.print("select a option:\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        int cases = input.nextInt();
+        int number;
+        switch (cases){
+            case 1:
+                labS.Phds[login].pInfo();
+                break;
+            case 2:
+                break;
+            case 3:
+                java.lang.System.out.print("insert a lab number\n");
+                number = input.nextInt();
+                labS.Labs[number].report(labS.Labs[number]);
+                break;
+            case 4:
+                logOff = true;
+                break;
+        }
 
+        return logOff;
     }
     public boolean commonMDisp(System labS, int login){
+        boolean logOff = false;
+        java.lang.System.out.print("select a option:\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        int cases = input.nextInt();
+        int number;
+        switch (cases){
+            case 1:
+                labS.Masterings[login].mInfo();
+                break;
+            case 2:
+                break;
+            case 3:
+                java.lang.System.out.print("insert a lab number\n");
+                number = input.nextInt();
+                labS.Labs[number].report(labS.Labs[number]);
+                break;
+            case 4:
+                logOff = true;
+                break;
+        }
 
+        return logOff;
     }
-    public boolean commonUDisp(System labS, int login){
 
-    }*/
+    public boolean commonUDisp(System labS, int login){
+        boolean logOff = false;
+        java.lang.System.out.print("select a option:\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        Scanner input = new Scanner(java.lang.System.in);
+        int cases = input.nextInt();
+        int number;
+        switch (cases){
+            case 1:
+                labS.Undergraduates[login].uInfo();
+                break;
+            case 2:
+                break;
+            case 3:
+                java.lang.System.out.print("insert a lab number\n");
+                number = input.nextInt();
+                labS.Labs[number].report(labS.Labs[number]);
+                break;
+            case 4:
+                logOff = true;
+                break;
+        }
+
+        return logOff;
+    }
+
 
     public  boolean adminDisp(System labS, int cases, int login){
         boolean logOff = false;

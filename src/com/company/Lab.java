@@ -62,44 +62,45 @@ public class Lab {
             }
         }
     }
-    public void report(Lab laboratory){
-        int  st1 = 0, st2 = 0, st3 = 0, pub = 0, gui = 0;
-        for (int i = 0; i< 1000; i++){
-            if(laboratory.projects[i] != null){
-                if (!laboratory.projects[i].status.equals("in preparation")){
-                    st1++;
-                }else if (!laboratory.projects[i].status.equals("in progress")){
-                    st2++;
-                    for (int j = 0; j< 100; j++){
-                        if (laboratory.projects[i].publications[j] != null){
-                            pub++;
+    public void report(Lab laboratory) {
+        if (laboratory != null) {
+            int st1 = 0, st2 = 0, st3 = 0, pub = 0, gui = 0;
+            for (int i = 0; i < 1000; i++) {
+                if (laboratory.projects[i] != null) {
+                    if (!laboratory.projects[i].status.equals("in preparation")) {
+                        st1++;
+                    } else if (!laboratory.projects[i].status.equals("in progress")) {
+                        st2++;
+                        for (int j = 0; j < 100; j++) {
+                            if (laboratory.projects[i].publications[j] != null) {
+                                pub++;
+                            }
+                            if (laboratory.projects[i].guidelines[j] != null) {
+                                gui++;
+                            }
                         }
-                        if (laboratory.projects[i].guidelines[j] != null){
-                            gui++;
-                        }
-                    }
-                }else{
-                    st3++;
-                    for (int j = 0; j< 100; j++){
-                        if (laboratory.projects[i].publications[j] != null){
-                            pub++;
-                        }
-                        if (laboratory.projects[i].guidelines[j] != null){
-                            gui++;
+                    } else {
+                        st3++;
+                        for (int j = 0; j < 100; j++) {
+                            if (laboratory.projects[i].publications[j] != null) {
+                                pub++;
+                            }
+                            if (laboratory.projects[i].guidelines[j] != null) {
+                                gui++;
+                            }
                         }
                     }
                 }
             }
+            java.lang.System.out.printf("-- Laboratory %s --\n", laboratory.name);
+            java.lang.System.out.printf("Number of contributors -- %d\n", laboratory.size);
+            java.lang.System.out.printf("Number of projects in preparation -- %d\n", st1);
+            java.lang.System.out.printf("Number of projects in progress -- %d\n", st2);
+            java.lang.System.out.printf("Number of completed projects -- %d\n", st3);
+            java.lang.System.out.printf("Total number of projects -- %d\n", st1 + st2 + st3);
+            java.lang.System.out.printf("Number of publications -- %d\n", pub);
+            java.lang.System.out.printf("Number of guidelines -- %d\n ", gui);
+
         }
-        java.lang.System.out.printf("-- Laboratory %s --\n", laboratory.name);
-        java.lang.System.out.printf("Number of contributors -- %d\n", laboratory.size);
-        java.lang.System.out.printf("Number of projects in preparation -- %d\n", st1);
-        java.lang.System.out.printf("Number of projects in progress -- %d\n", st2);
-        java.lang.System.out.printf("Number of completed projects -- %d\n", st3);
-        java.lang.System.out.printf("Total number of projects -- %d\n", st1+st2+st3);
-        java.lang.System.out.printf("Number of publications -- %d\n", pub);
-        java.lang.System.out.printf("Number of guidelines -- %d\n ", gui);
-
     }
-
 }
