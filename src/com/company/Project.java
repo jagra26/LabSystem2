@@ -36,121 +36,149 @@ public class Project {
         }
 
     }
-    public void addParticipant(System labS, Project project, int cases, int login){
-        boolean free = true;
-        switch (cases){
-            case 1:
-                for (int i = 0; i<100; i++){
-                    if(labS.Researchers[login].projects[i] != null ){
-                        free = false;
-                        break;
-                    }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Researchers[login].projects[i] == null){
-                            labS.Researchers[login].projects[i] = project;
+    public void addParticipant(System labS, Project project, int cases, int login) {
+        if (project != null && !project.status.equals("in preparation")) {
+            boolean free = true;
+            switch (cases) {
+                case 1:
+                    for (int i = 0; i < 100; i++) {
+                        if (labS.Researchers[login].projects[i] != null) {
+                            free = false;
                             break;
                         }
                     }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
-            case 2:
-                for (int i = 0; i<100; i++){
-                    if(labS.Teachers[login].projects[i] != null ){
-                        free = false;
-                        break;
+                    if (free) {
+                        project.participants[cases - 1][login] = 1;
+                        for (int i = 0; i < 100; i++) {
+                            if (labS.Researchers[login].projects[i] == null) {
+                                labS.Researchers[login].projects[i] = project;
+                                break;
+                            }
+                        }
+                    } else {
+                        java.lang.System.out.print("user not available\n");
                     }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Teachers[login].projects[i] == null){
-                            labS.Teachers[login].projects[i] = project;
+                    break;
+                case 2:
+                    for (int i = 0; i < 100; i++) {
+                        if (labS.Teachers[login].projects[i] != null) {
+                            free = false;
                             break;
                         }
                     }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
+                    if (free) {
+                        project.participants[cases - 1][login] = 1;
+                        for (int i = 0; i < 100; i++) {
+                            if (labS.Teachers[login].projects[i] == null) {
+                                labS.Teachers[login].projects[i] = project;
+                                break;
+                            }
+                        }
+                    } else {
+                        java.lang.System.out.print("user not available\n");
+                    }
+                    break;
                 case 3:
-                for (int i = 0; i<100; i++){
-                    if(labS.Phds[login].projects[i] != null){
-                        free = false;
-                        break;
-                    }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Phds[login].projects[i] == null){
-                            labS.Phds[login].projects[i] = project;
+                    for (int i = 0; i < 100; i++) {
+                        if (labS.Phds[login].projects[i] != null) {
+                            free = false;
                             break;
                         }
                     }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
-            case 4:
-                for (int i = 0; i<100; i++){
-                    if(labS.Masterings[login].projects[i] != null){
-                        free = false;
-                        break;
+                    if (free) {
+                        project.participants[cases - 1][login] = 1;
+                        for (int i = 0; i < 100; i++) {
+                            if (labS.Phds[login].projects[i] == null) {
+                                labS.Phds[login].projects[i] = project;
+                                break;
+                            }
+                        }
+                    } else {
+                        java.lang.System.out.print("user not available\n");
                     }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Masterings[login].projects[i] == null){
-                            labS.Masterings[login].projects[i] = project;
+                    break;
+                case 4:
+                    for (int i = 0; i < 100; i++) {
+                        if (labS.Masterings[login].projects[i] != null) {
+                            free = false;
                             break;
                         }
                     }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
-            case 5:
-                for (int i = 0; i<100; i++){
-                    if(labS.Undergraduates[login].projects[i] != null && !labS.Undergraduates[login].projects[i].status.equals("in progress")){
-                        free = false;
-                        break;
+                    if (free) {
+                        project.participants[cases - 1][login] = 1;
+                        for (int i = 0; i < 100; i++) {
+                            if (labS.Masterings[login].projects[i] == null) {
+                                labS.Masterings[login].projects[i] = project;
+                                break;
+                            }
+                        }
+                    } else {
+                        java.lang.System.out.print("user not available\n");
                     }
-                }
-                if (free){
-                    project.participants[cases-1][login] = 1;
-                    for (int i = 0; i<100; i++){
-                        if (labS.Undergraduates[login].projects[i] == null){
-                            labS.Undergraduates[login].projects[i] = project;
+                    break;
+                case 5:
+                    for (int i = 0; i < 100; i++) {
+                        if (labS.Undergraduates[login].projects[i] != null && !labS.Undergraduates[login].projects[i].status.equals("in progress")) {
+                            free = false;
                             break;
                         }
                     }
-                }else{
-                    java.lang.System.out.print("user not available\n");
-                }
-                break;
-        }
+                    if (free) {
+                        project.participants[cases - 1][login] = 1;
+                        for (int i = 0; i < 100; i++) {
+                            if (labS.Undergraduates[login].projects[i] == null) {
+                                labS.Undergraduates[login].projects[i] = project;
+                                break;
+                            }
+                        }
+                    } else {
+                        java.lang.System.out.print("user not available\n");
+                    }
+                    break;
+            }
 
+        }
     }
+
     public void setStatus(String status) {
         this.status = status;
     }
-    public void updateStatus(Project project){
-        if (project.status.equals("in preparation")){
-            project.setStatus("in progress");
+    public void updateStatus(){
+        if (this.status.equals("in preparation")){
+            this.setStatus("in progress");
         }else{
             for (int i = 0; i<100; i++){
-                if (project.publications[i] != null){
-                    project.setStatus("completed");
+                if (this.publications[i] != null || this.guidelines[i] != null){
+                    this.setStatus("completed");
                     break;
                 }
             }
 
+        }
+    }
+    public void newPublication(int cases, int login) {
+        if (this != null && !this.status.equals("in progress")) {
+            Scanner input = new Scanner(java.lang.System.in);
+            String title, conference;
+            int year;
+            for (int i = 0; i < 100; i++) {
+                if (this.publications[i] == null) {
+                    java.lang.System.out.print("insert a title, a conference and a year");
+                    title = input.nextLine();
+                    conference = input.nextLine();
+                    year = input.nextInt();
+                    this.publications[i] = new Publication(title, conference, cases, login, year);
+                }
+            }
+        }
+    }
+    public void newGuidance(System labS, int login){
+        if (this != null ) {
+            for (int i = 0; i < 100; i++) {
+                if (this.guidelines[i] == null) {
+                    this.guidelines[i] = new Guidance(labS.Teachers[login]);
+                }
+            }
         }
     }
 }
