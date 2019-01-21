@@ -70,7 +70,7 @@ public class System {
         int login = input.nextInt();
         boolean logIn = false;
         boolean isAdm = this.users.get(login).admin;
-        while (logIn){
+        while (!logIn){
             logIn = !userDisp(labS, login, isAdm);
         }
     }
@@ -116,9 +116,9 @@ public class System {
     private boolean adminTDisp(System labS, int login){
         boolean logOff = false;
         java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
-                "add participants in a lab - 6 add participants in a project - 7 update a project status -8\n"+
-                "new publication - 9  new guidance - 10 exit - 11\n");
+        java.lang.System.out.print("info - 1\n collaborator info - 2\nnew project - 5\n"+
+                "add participants in a project - 7\n update a project status -8\n"+
+                "new publication - 9\n  new guidance - 10\n exit - 11\n");
         Scanner input = new Scanner(java.lang.System.in);
         int cases = input.nextInt();
         int newcolab, nLog;
@@ -128,6 +128,24 @@ public class System {
                 break;
             case 2:
                 colabInfo();
+                break;
+            case 5:
+                java.lang.System.out.print("insert a project title\n");
+                String title = input.nextLine();
+                java.lang.System.out.print("insert a funding agency\n");
+                String fundingAgency = input.nextLine();
+                java.lang.System.out.print("Insert a objective\n");
+                String objective = input.nextLine();
+                java.lang.System.out.print("insert a description\n");
+                String description = input.nextLine();
+                java.lang.System.out.print("insert a begin (year)\n");
+                int begin = input.nextInt();
+                java.lang.System.out.print("insert a end (year)\n");
+                int end = input.nextInt();
+                java.lang.System.out.print("insert a value\n");
+                double value = input.nextDouble();
+                labS.projects.add(new Project(labS, title, fundingAgency, objective,
+                         description, begin, end, value, login));
                 break;
             case 7:
                 java.lang.System.out.print("insert a project number\n");
@@ -190,6 +208,24 @@ public class System {
                 break;
             case 2:
                 colabInfo();
+                break;
+            case 5:
+                java.lang.System.out.print("insert a project title\n");
+                String title = input.nextLine();
+                java.lang.System.out.print("insert a funding agency\n");
+                String fundingAgency = input.nextLine();
+                java.lang.System.out.print("Insert a objective\n");
+                String objective = input.nextLine();
+                java.lang.System.out.print("insert a description\n");
+                String description = input.nextLine();
+                java.lang.System.out.print("insert a begin (year)\n");
+                int begin = input.nextInt();
+                java.lang.System.out.print("insert a end (year)\n");
+                int end = input.nextInt();
+                java.lang.System.out.print("insert a value\n");
+                double value = input.nextDouble();
+                labS.projects.add(new Project(labS, title, fundingAgency, objective,
+                        description, begin, end, value, login));
                 break;
             case 7:
                 java.lang.System.out.print("insert a project number\n");

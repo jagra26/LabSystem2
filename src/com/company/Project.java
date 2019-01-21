@@ -6,10 +6,11 @@ import java.util.Scanner;
 public class Project {
     String title, fundingAgency, objective, description, status;
     ArrayList<Integer> participants;
-    int begin, end, value;
+    int begin, end;
+    double value;
     ArrayList<Publication> publications;
     ArrayList<Guidance> guidelines;
-    public Project(System labS, String title, String fundingAgency, String objective, String description, int begin, int end, int value,
+    public Project(System labS, String title, String fundingAgency, String objective, String description, int begin, int end, double value,
                    int login){
         this.title = title;
         this.fundingAgency = fundingAgency;
