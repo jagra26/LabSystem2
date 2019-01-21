@@ -1,142 +1,56 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class System {
-    Lab[] Labs;
-    Researcher[] Researchers;
-    Teacher[] Teachers;
-    Phd[] Phds;
-    Mastering[] Masterings;
-    Undergraduate[] Undergraduates;
+    ArrayList<People> users;
+    ArrayList<Project> projects;
 
     public System() {
-        this.Labs = new Lab[1000];
-        this.Researchers = new Researcher[1000];
-        this.Teachers = new Teacher[1000];
-        this.Phds = new Phd[1000];
-        this.Masterings = new Mastering[1000];
-        this.Undergraduates = new Undergraduate[1000];
+        this.users = new ArrayList<>();
+        this.projects = new ArrayList<>();
     }
-
-    public void newResearcher(boolean isAdmin, System labS) {
+    private void newPeople(boolean isAdmin, int type) {
         Scanner input = new Scanner(java.lang.System.in);
         java.lang.System.out.print("insert your name:\n");
         String newName = input.nextLine();
         java.lang.System.out.print("insert your email:\n");
         String newEmail = input.nextLine();
-        int login = 0;
-        for (int i = 0; i < 1000; i++) {
-            if (labS.Researchers[i] == null) {
-                login = i;
-                break;
-            }
-        }
-        labS.Researchers[login] = new Researcher(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
-
-    }
-
-    public void newTeacher(boolean isAdmin, System labS) {
-        Scanner input = new Scanner(java.lang.System.in);
-        java.lang.System.out.print("insert your name:\n");
-        String newName = input.nextLine();
-        java.lang.System.out.print("insert your email:\n");
-        String newEmail = input.nextLine();
-        int login = 0;
-        for (int i = 0; i < 1000; i++) {
-            if (labS.Teachers[i] == null) {
-                login = i;
-                break;
-            }
-        }
-        labS.Teachers[login] = new Teacher(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
-    }
-
-    public void newPhd(boolean isAdmin, System labS) {
-        Scanner input = new Scanner(java.lang.System.in);
-        java.lang.System.out.print("insert your name:\n");
-        String newName = input.nextLine();
-        java.lang.System.out.print("insert your email:\n");
-        String newEmail = input.nextLine();
-        int login = 0;
-        for (int i = 0; i < 1000; i++) {
-            if (labS.Phds[i] == null) {
-                login = i;
-                break;
-            }
-        }
-        labS.Phds[login] = new Phd(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
-    }
-
-    public void newMastering(boolean isAdmin, System labS) {
-        Scanner input = new Scanner(java.lang.System.in);
-        java.lang.System.out.print("insert your name:\n");
-        String newName = input.nextLine();
-        java.lang.System.out.print("insert your email:\n");
-        String newEmail = input.nextLine();
-        int login = 0;
-        for (int i = 0; i < 1000; i++) {
-            if (labS.Masterings[i] == null) {
-                login = i;
-                break;
-            }
-        }
-        labS.Masterings[login] = new Mastering(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
-    }
-
-    public void newUndergraduate(boolean isAdmin, System labS) {
-        Scanner input = new Scanner(java.lang.System.in);
-        java.lang.System.out.print("insert your name:\n");
-        String newName = input.nextLine();
-        java.lang.System.out.print("insert your email:\n");
-        String newEmail = input.nextLine();
-        int login = 0;
-        for (int i = 0; i < 1000; i++) {
-            if (labS.Undergraduates[i] == null) {
-                login = i;
-                break;
-            }
-        }
-        labS.Undergraduates[login] = new Undergraduate(newName, newEmail, login, isAdmin);
-        java.lang.System.out.printf("registered successfully\n your login is %d\n", login);
-    }
-
-    public void newAdmin(System labS) {
-        java.lang.System.out.print("Choose your formation:\n");
-        java.lang.System.out.print("Researcher - 1\n");
-        java.lang.System.out.print("Teacher - 2\n");
-        java.lang.System.out.print("PhD - 3\n");
-        java.lang.System.out.print("Mastering - 4\n");
-        java.lang.System.out.print("Undergraduate - 5\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        switch (cases) {
+        switch (type) {
             case 1:
-                newResearcher(true, labS);
+                Researcher newResearcher = new Researcher(newName, newEmail, this.users.size() - 1, isAdmin);
+                this.users.add(newResearcher);
+                java.lang.System.out.printf("registered successfully\n your login is %d\n", this.users.indexOf(newResearcher));
                 break;
             case 2:
-                newTeacher(true, labS);
+                Teacher newTeacher = new Teacher(newName, newEmail, this.users.size() - 1, isAdmin);
+                this.users.add(newTeacher);
+                java.lang.System.out.printf("registered successfully\n your login is %d\n", this.users.indexOf(newTeacher));
                 break;
             case 3:
-                newPhd(true, labS);
+                Phd newPhd = new Phd(newName, newEmail, this.users.size()-1, isAdmin);
+                this.users.add(newPhd);
+                java.lang.System.out.printf("registered successfully\n your login is %d\n", this.users.indexOf(newPhd));
                 break;
             case 4:
-                newMastering(true, labS);
+                Mastering newMastering = new Mastering(newName, newEmail, this.users.size()-1, isAdmin);
+                this.users.add(newMastering);
+                java.lang.System.out.printf("registered successfully\n your login is %d\n", this.users.indexOf(newMastering));
                 break;
             case 5:
-                newUndergraduate(true, labS);
+                Undergraduate newUndergraduate = new Undergraduate(newName, newEmail, this.users.size()-1, isAdmin);
+                this.users.add(newUndergraduate);
+                java.lang.System.out.printf("registered successfully\n your login is %d\n", this.users.indexOf(newUndergraduate));
                 break;
         }
-
-
     }
-
-    public void newUser(System labS) {
+    private boolean isAdmin(int input){
+        if (input == 1){return true;}
+        return false;
+    }
+    private void newUser() {
         java.lang.System.out.print("Choose your formation:\n");
         java.lang.System.out.print("Researcher - 1\n");
         java.lang.System.out.print("Teacher - 2\n");
@@ -145,353 +59,61 @@ public class System {
         java.lang.System.out.print("Undergraduate - 5\n");
         Scanner input = new Scanner(java.lang.System.in);
         int cases = input.nextInt();
-        switch (cases) {
-            case 1:
-                newResearcher(false, labS);
-                break;
-            case 2:
-                newTeacher(false, labS);
-                break;
-            case 3:
-                newPhd(false, labS);
-                break;
-            case 4:
-                newMastering(false, labS);
-                break;
-            case 5:
-                newUndergraduate(false, labS);
-                break;
-        }
+        java.lang.System.out.print("Admin?\n yes -- 1 no -- 2\n");
+        int admin = input.nextInt();
+        boolean isadmin = isAdmin(admin);
+        newPeople(isadmin, cases);
     }
-
-    public void logon (System labS){
-        java.lang.System.out.print("Choose your formation:\n");
-        java.lang.System.out.print("Researcher - 1\n");
-        java.lang.System.out.print("Teacher - 2\n");
-        java.lang.System.out.print("PhD - 3\n");
-        java.lang.System.out.print("Mastering - 4\n");
-        java.lang.System.out.print("Undergraduate - 5\n");
+    private void logon (System labS){
         Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
         java.lang.System.out.print("insert your login:\n");
         int login = input.nextInt();
         boolean logIn = false;
-        boolean isAdm = false;
-        switch (cases) {
-            case 1:
-                if (labS.Researchers[login] != null){
-                    java.lang.System.out.printf("welcome %s!\n", labS.Researchers[login].name);
-                    logIn = true;
-                    isAdm = labS.Researchers[login].admin;
-                }else{
-                    java.lang.System.out.print("non-existent user\n");
-                }
-                break;
-            case 2:
-                if (labS.Teachers[login] != null){
-                    java.lang.System.out.printf("welcome %s!\n", labS.Teachers[login].name);
-                    logIn = true;
-                    isAdm = labS.Teachers[login].admin;
-                }else{
-                    java.lang.System.out.print("non-existent user\n");
-                }
-                break;
-            case 3:
-                if (labS.Phds[login] != null){
-                    java.lang.System.out.printf("welcome %s!\n", labS.Phds[login].name);
-                    logIn = true;
-                    isAdm = labS.Phds[login].admin;
-                }else{
-                    java.lang.System.out.print("non-existent user\n");
-                }
-                break;
-            case 4:
-                if (labS.Masterings[login] != null){
-                    java.lang.System.out.printf("welcome %s!\n", labS.Masterings[login].name);
-                    logIn = true;
-                    isAdm = labS.Masterings[login].admin;
-                }else {
-                    java.lang.System.out.print("non-existent user\n");
-                }
-                break;
-            case 5:
-                if (labS.Undergraduates[login] != null){
-                    java.lang.System.out.printf("welcome %s!\n", labS.Undergraduates[login].name);
-                    logIn = true;
-                    isAdm = labS.Undergraduates[login].admin;
-                }else{
-                    java.lang.System.out.print("non-existent user\n");
-                }
-                break;
-        }
+        boolean isAdm = this.users.get(login).admin;
         while (logIn){
-            logIn = !userDisp(labS, cases, login, isAdm);
+            logIn = !userDisp(labS, login, isAdm);
         }
     }
-
-    public boolean userDisp(System labS, int cases, int login, boolean isAdm){
+    private boolean userDisp(System labS, int login, boolean isAdm){
         boolean logOff = false;
         if (isAdm){
-            logOff = adminDisp(labS, cases, login);
+            logOff = adminDisp(labS, login);
         }else{
-            logOff = commonDisp(labS, cases, login);
+            logOff = commonUDisp(login);
         }
         return logOff;
     }
-
-    public boolean commonDisp(System labS, int cases, int login){
-        boolean logOff = false;
-        switch (cases){
-            case 1:
-                logOff = commonRDisp(labS, login);
-                break;
-            case 2:
-                logOff = commonTDisp(labS, login);
-                break;
-            case 3:
-                logOff = commonPDisp(labS, login);
-                break;
-            case 4:
-                logOff = commonMDisp(labS, login);
-                break;
-            case 5:
-                logOff = commonUDisp(labS, login);
-                break;
-        }
-        return logOff;
-    }
-    public boolean commonRDisp(System labS, int login){
+    private boolean commonUDisp(int login){
         boolean logOff = false;
         java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
+        java.lang.System.out.print("info - 1 collaborator info - 2 exit - 3\n");
         Scanner input = new Scanner(java.lang.System.in);
         int cases = input.nextInt();
         int number;
         switch (cases){
             case 1:
-                labS.Researchers[login].rInfo();
+                this.users.get(login).info();
                 break;
             case 2:
-                colabInfo(labS);
+                colabInfo();
                 break;
             case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
                 logOff = true;
                 break;
         }
 
         return logOff;
     }
-
-    public boolean commonTDisp(System labS, int login){
+    private  boolean adminDisp(System labS, int login){
         boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number;
-        switch (cases){
-            case 1:
-                labS.Teachers[login].tInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-    }
-    public boolean commonPDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number;
-        switch (cases){
-            case 1:
-                labS.Phds[login].pInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-    }
-    public boolean commonMDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number;
-        switch (cases){
-            case 1:
-                labS.Masterings[login].mInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-    }
-
-    public boolean commonUDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 exit -4\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number;
-        switch (cases){
-            case 1:
-                labS.Undergraduates[login].uInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-    }
-
-
-    public  boolean adminDisp(System labS, int cases, int login){
-        boolean logOff = false;
-        switch (cases){
-            case 1:
-                logOff = adminRDisp(labS, login);
-                break;
-            case 2:
-                logOff = adminTDisp(labS, login);
-                break;
-            case 3:
-                logOff = adminPDisp(labS, login);
-                break;
-            case 4:
-                logOff = adminMDisp(labS, login);
-                break;
-            case 5:
-                logOff = adminUDisp(labS, login);
-                break;
+        if (labS.users.get(login).type == 2){
+            logOff = adminTDisp(labS, login);
+        }else{
+            logOff =adminUDisp(labS, login);
         }
         return logOff;
     }
-
-    public boolean adminRDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
-                "add participants in a lab - 6 add participants in a project - 7 update a project status -8\n"+
-                "new publication - 9 exit - 10\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number, classes, nLog;
-        switch (cases){
-            case 1:
-                labS.Researchers[login].rInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                newLab(labS, login, 1);
-                break;
-            case 5:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                for (int i = 0; i< 100; i++){
-                    if (labS.Researchers[login].projects[i] == null){
-                        labS.Researchers[login].projects[i] = labS.Labs[number].projects[labS.Labs[number].newProject(labS, labS.Labs[number], 1, login)];
-                    }
-                }
-                break;
-            case 6:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("Choose the formation:\n");
-                java.lang.System.out.print("Researcher - 1\n");
-                java.lang.System.out.print("Teacher - 2\n");
-                java.lang.System.out.print("PhD - 3\n");
-                java.lang.System.out.print("Mastering - 4\n");
-                java.lang.System.out.print("Undergraduate - 5\n");
-                classes  = input.nextInt();
-                java.lang.System.out.print("insert the login number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].addContributors(labS.Labs[number], classes, nLog);
-                break;
-            case 7:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].addParticipant(labS,labS.Labs[number].projects[nLog], cases, login);
-                break;
-            case 8:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].updateStatus();
-                break;
-            case 9:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newPublication(cases, login);
-                break;
-            case 10:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-    }
-    public boolean adminTDisp(System labS, int login){
+    private boolean adminTDisp(System labS, int login){
         boolean logOff = false;
         java.lang.System.out.print("select a option:\n");
         java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
@@ -499,72 +121,52 @@ public class System {
                 "new publication - 9  new guidance - 10 exit - 11\n");
         Scanner input = new Scanner(java.lang.System.in);
         int cases = input.nextInt();
-        int number, classes, nLog;
+        int newcolab, nLog;
         switch (cases){
             case 1:
-                labS.Teachers[login].tInfo();
+                labS.users.get(login).info();
                 break;
             case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                newLab(labS, login, 2);
-                break;
-            case 5:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                for (int i = 0; i< 100; i++){
-                    if (labS.Teachers[login].projects[i] == null){
-                        labS.Teachers[login].projects[i] = labS.Labs[number].projects[labS.Labs[number].newProject(labS, labS.Labs[number], 1, login)];
-                    }
-                }
-                break;
-            case 6:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("Choose the formation:\n");
-                java.lang.System.out.print("Researcher - 1\n");
-                java.lang.System.out.print("Teacher - 2\n");
-                java.lang.System.out.print("PhD - 3\n");
-                java.lang.System.out.print("Mastering - 4\n");
-                java.lang.System.out.print("Undergraduate - 5\n");
-                classes  = input.nextInt();
-                java.lang.System.out.print("insert the login number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].addContributors(labS.Labs[number], classes, nLog);
+                colabInfo();
                 break;
             case 7:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].addParticipant(labS,labS.Labs[number].projects[nLog], cases, login);
+                java.lang.System.out.print("enter the new employee login\n");
+                newcolab = input.nextInt();
+                if (!this.projects.get(nLog).participants.contains(newcolab)){
+                    this.projects.get(nLog).participants.add(newcolab);
+                    this.users.get(newcolab).myprojects.add(nLog);
+                }else{
+                    java.lang.System.out.print("this collaborator already participates in the project\n");
+                }
                 break;
             case 8:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].updateStatus();
+                if (this.projects.get(nLog).participants.contains(login)){
+                    this.projects.get(nLog).updateStatus();
+                }else{
+                    java.lang.System.out.print("You do not participate in this project\n");
+                }
                 break;
             case 9:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newPublication(cases, login);
+                if (this.projects.get(nLog).participants.contains(login)){
+                    this.projects.get(nLog).newPublication(login);
+                }else{
+                    java.lang.System.out.print("You do not participate in this project\n");
+                }
                 break;
             case 10:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newGuidance(labS, login);
+                if (this.projects.get(nLog).participants.contains(login)){
+                    this.projects.get(nLog).newGuidance(labS, login);
+                }else{
+                    java.lang.System.out.print("You do not participate in this project\n");
+                }
                 break;
             case 11:
                 logOff = true;
@@ -574,225 +176,50 @@ public class System {
         return logOff;
 
     }
-    public boolean adminPDisp(System labS, int login){
+    private boolean adminUDisp(System labS, int login){
         boolean logOff = false;
-        java.lang.System.out.print("select a option:\n");
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
+        java.lang.System.out.print("info - 1 collaborator info - 2  new project - 5\n"+
                 "add participants in a lab - 6 add participants in a project - 7 update a project status -8\n"+
                 "new publication - 9 exit - 10\n");
         Scanner input = new Scanner(java.lang.System.in);
         int cases = input.nextInt();
-        int number, classes, nLog;
+        int newcolab, nLog;
         switch (cases){
             case 1:
-                labS.Phds[login].pInfo();
+                labS.users.get(login).info();
                 break;
             case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                newLab(labS, login, 3);
-                break;
-            case 5:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                for (int i = 0; i< 100; i++){
-                    if (labS.Phds[login].projects[i] == null){
-                        labS.Phds[login].projects[i] = labS.Labs[number].projects[labS.Labs[number].newProject(labS, labS.Labs[number], 1, login)];
-                    }
-                }
-                break;
-            case 6:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("Choose the formation:\n");
-                java.lang.System.out.print("Researcher - 1\n");
-                java.lang.System.out.print("Teacher - 2\n");
-                java.lang.System.out.print("PhD - 3\n");
-                java.lang.System.out.print("Mastering - 4\n");
-                java.lang.System.out.print("Undergraduate - 5\n");
-                classes  = input.nextInt();
-                java.lang.System.out.print("insert the login number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].addContributors(labS.Labs[number], classes, nLog);
+                colabInfo();
                 break;
             case 7:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].addParticipant(labS,labS.Labs[number].projects[nLog], cases, login);
-                break;
-            case 8:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].updateStatus();
-                break;
-            case 9:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newPublication(cases, login);
-                break;
-
-            case 10:
-                logOff = true;
-                break;
-        }
-
-        return logOff;
-
-    }
-    public boolean adminMDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
-                "add participants in a lab - 6 add participants in a project - 7 update a project status -8\n"+
-                "new publication - 9 exit - 10\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number, classes, nLog;
-        switch (cases) {
-            case 1:
-                labS.Masterings[login].mInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                newLab(labS, login, 4);
-                break;
-            case 5:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                for (int i = 0; i < 100; i++) {
-                    if (labS.Masterings[login].projects[i] == null) {
-                        labS.Masterings[login].projects[i] = labS.Labs[number].projects[labS.Labs[number].newProject(labS, labS.Labs[number], 1, login)];
-                    }
+                java.lang.System.out.print("enter the new employee login\n");
+                newcolab = input.nextInt();
+                if (!this.projects.get(nLog).participants.contains(newcolab)){
+                    this.projects.get(nLog).participants.add(newcolab);
+                    this.users.get(newcolab).myprojects.add(nLog);
+                }else{
+                    java.lang.System.out.print("this collaborator already participates in the project\n");
                 }
                 break;
-            case 6:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("Choose the formation:\n");
-                java.lang.System.out.print("Researcher - 1\n");
-                java.lang.System.out.print("Teacher - 2\n");
-                java.lang.System.out.print("PhD - 3\n");
-                java.lang.System.out.print("Mastering - 4\n");
-                java.lang.System.out.print("Undergraduate - 5\n");
-                classes = input.nextInt();
-                java.lang.System.out.print("insert the login number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].addContributors(labS.Labs[number], classes, nLog);
-                break;
-            case 7:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].addParticipant(labS, labS.Labs[number].projects[nLog], cases, login);
-                break;
             case 8:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].updateStatus();
-                break;
-            case 9:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newPublication(cases, login);
-                break;
-
-            case 10:
-                logOff = true;
-                break;
-        }
-
-            return logOff;
-
-    }
-    public boolean adminUDisp(System labS, int login){
-        boolean logOff = false;
-        java.lang.System.out.print("info - 1 collaborator info - 2 lab report - 3 new lab - 4 new project - 5\n"+
-                "add participants in a lab - 6 add participants in a project - 7 update a project status -8\n"+
-                "new publication - 9 exit - 10\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
-        int number, classes, nLog;
-        switch (cases){
-            case 1:
-                labS.Undergraduates[login].uInfo();
-                break;
-            case 2:
-                colabInfo(labS);
-                break;
-            case 3:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                labS.Labs[number].report(labS.Labs[number]);
-                break;
-            case 4:
-                newLab(labS, login, 5);
-                break;
-            case 5:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                for (int i = 0; i < 100; i++) {
-                    if (labS.Masterings[login].projects[i] == null) {
-                        labS.Masterings[login].projects[i] = labS.Labs[number].projects[labS.Labs[number].newProject(labS, labS.Labs[number], 1, login)];
-                    }
+                if (this.projects.get(nLog).participants.contains(login)){
+                    this.projects.get(nLog).updateStatus();
+                }else{
+                    java.lang.System.out.print("You do not participate in this project\n");
                 }
                 break;
-            case 6:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("Choose the formation:\n");
-                java.lang.System.out.print("Researcher - 1\n");
-                java.lang.System.out.print("Teacher - 2\n");
-                java.lang.System.out.print("PhD - 3\n");
-                java.lang.System.out.print("Mastering - 4\n");
-                java.lang.System.out.print("Undergraduate - 5\n");
-                classes = input.nextInt();
-                java.lang.System.out.print("insert the login number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].addContributors(labS.Labs[number], classes, nLog);
-                break;
-            case 7:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].addParticipant(labS, labS.Labs[number].projects[nLog], cases, login);
-                break;
-            case 8:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
-                java.lang.System.out.print("insert a project number\n");
-                nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].updateStatus();
-                break;
             case 9:
-                java.lang.System.out.print("insert a lab number\n");
-                number = input.nextInt();
                 java.lang.System.out.print("insert a project number\n");
                 nLog = input.nextInt();
-                labS.Labs[number].projects[nLog].newPublication(cases, login);
+                if (this.projects.get(nLog).participants.contains(login)){
+                    this.projects.get(nLog).newPublication(login);
+                }else{
+                    java.lang.System.out.print("You do not participate in this project\n");
+                }
                 break;
 
             case 10:
@@ -806,70 +233,30 @@ public class System {
     public boolean display(System labS) {
         boolean exit = false;
         java.lang.System.out.print("insert your option\n");
-        java.lang.System.out.print("New admin - 1\n");
-        java.lang.System.out.print("New user - 2\n");
-        java.lang.System.out.print("Login - 3\n");
-        java.lang.System.out.print("Exit - 4\n");
+        java.lang.System.out.print("New user - 1\n");
+        java.lang.System.out.print("Login - 2\n");
+        java.lang.System.out.print("Exit - 3\n");
         Scanner input = new Scanner(java.lang.System.in);
         int choice = input.nextInt();
         switch (choice){
             case 1:
-                newAdmin(labS);
+                newUser();
                 break;
             case 2:
-                newUser(labS);
-                break;
-            case 3:
                 logon(labS);
                 break;
-            case 4:
+            case 3:
                 exit = true;
                 break;
         }
         return exit;
     }
-
-    public void colabInfo(System labS){
-        java.lang.System.out.print("Choose the formation:\n");
-        java.lang.System.out.print("Researcher - 1\n");
-        java.lang.System.out.print("Teacher - 2\n");
-        java.lang.System.out.print("PhD - 3\n");
-        java.lang.System.out.print("Mastering - 4\n");
-        java.lang.System.out.print("Undergraduate - 5\n");
+    private void colabInfo(){
         Scanner input = new Scanner(java.lang.System.in);
-        int cases = input.nextInt();
         java.lang.System.out.print("insert the login:\n");
         int login = input.nextInt();
-        switch (cases){
-            case 1:
-                labS.Researchers[login].rInfo();
-                break;
-            case 2:
-                labS.Teachers[login].tInfo();
-                break;
-            case 3:
-                labS.Phds[login].pInfo();
-                break;
-            case 4:
-                labS.Masterings[login].mInfo();
-                break;
-            case 5:
-                labS.Undergraduates[login].uInfo();
-                break;
+        this.users.get(login).info();
         }
-    }
-    public void newLab(System labS, int login, int cases){
-        java.lang.System.out.print("enter the name of the laboratory:\n");
-        Scanner input = new Scanner(java.lang.System.in);
-        String name = input.nextLine();
-        for (int i = 0; i<1000; i++){
-            if (labS.Labs[i] == null){
-                labS.Labs[i] = new Lab(name, cases, login, i);
-                java.lang.System.out.printf("number of lab is %d\n", i);
-                break;
-            }
-        }
-    }
 
 }
 
