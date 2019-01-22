@@ -8,6 +8,12 @@ public class Publication {
     String title;
     String conference;
     int year;
+
+    @Override
+    public String toString() {
+        return this.title + " , " + this.conference + " , " + this.year + "\n";
+    }
+
     public Publication(String title, String conference, int login, int year){
         this.title = title;
         this.conference = conference;
@@ -32,4 +38,5 @@ public class Publication {
             }
         }
     }
+
 }

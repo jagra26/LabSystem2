@@ -63,13 +63,18 @@ public class Project {
             }
         }
     }
-    public void newPublication(int login) {
+    public void newPublication(int login, System labS) {
         Scanner input = new Scanner(java.lang.System.in);
         java.lang.System.out.print("insert a title, a conference and a year");
         String title = input.nextLine();
         String conference = input.nextLine();
         int year = input.nextInt();
-        this.publications.add(new Publication(title, conference, login, year));
+        Publication publication = new Publication(title, conference, login, year);
+        this.publications.add(publication);
+        for (Integer author:
+             publication.authors) {
+            labS.users.get(author).publications.add(publication);
+        }
     }
     public void newGuidance(System labS, int login){
         this.guidelines.add( new Guidance((Teacher)labS.users.get(login)));
